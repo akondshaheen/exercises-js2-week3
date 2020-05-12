@@ -61,7 +61,60 @@ var movies = [
 // create showMovies function
 
 
-// create a new movie object for your favorite movie
 
+// for (var i = 0; i < movies.length; i++) {
+//   var para = document.createElement("p");
+//   para.innerHTML = "The title name is " + movies[i].title + " and the director name is " + movies[i].director;
+//   allMovies.appendChild(para);
+//   //console.log(tasK1);
+// }
+// // create a new movie object for your favorite movie
+setTimeout(showMovies, 1000);
+function showMovies() {
+  for (var i = 0; i < movies.length; i++) {
+    var allMovies = document.getElementById("all-movies");
+
+    var para = document.createElement("p");
+    para.innerHTML = "The title name is " + movies[i].title + " and the director name is " + movies[i].director;
+    allMovies.appendChild(para);
+    //console.log(tasK1);
+  }
+}
 
 // create addMovies function
+//Task 2
+// Amend your function above to only show movies after 1 second. Remember to use setTimeout to achieve that
+// Create a new function called "addMovie"
+// - it receives a movie object as an argument - your can create a new object for your favorite movie following using the "myMovies" objects as a guide 
+// - it adds the new movie to the list of movies after 2 seconds. Remember to setTimeout to achieve that
+// Call addMovies to add the new movie to the list and then showMovies to see the movies added on the screen.
+// How many movies can you see on your page?
+
+
+
+
+setTimeout(addMovie, 2000);
+
+
+function addMovie() {
+
+  var nMovie = {
+    title: "Kung Fu Panda",
+    director: "Shaheen AKond",
+    type: "horror",
+    haveWatched: false,
+  }
+  movies.push(nMovie);
+
+  var allMovies = document.getElementById("all-movies");
+
+  var para = document.createElement("p");
+  para.innerHTML = "The title name is " + Movie.title + " and the director name is " + nMovie.director;
+  allMovies.appendChild(para);
+
+}
+
+
+
+
+
